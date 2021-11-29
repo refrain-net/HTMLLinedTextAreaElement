@@ -2,21 +2,116 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <title>DEMO - lined-pre</title>
+    <title>README - HTMLLinedTextAreaElement</title>
     <link href="style.css" rel="stylesheet">
     <script src="HTMLLinedTextAreaElement.js"></script>
   </head>
   <body>
-    <lined-textarea>package com.example;
+    <h1>HTMLLinedTextAreaElement</h1>
 
-import android.app.Activity;
-import android.os.Bundle;
+    <h2 id="index">INDEX</h2>
+    <ol>
+      <li><a href="#overview">概要 / Overview</a></li>
+      <li><a href="#requirement">要求事項 / Requirement</a></li>
+      <li><a href="#usage">使い方 / Usage</a><ol>
+        <li><a href="#default-style">デフォルト書式 / Default Styles</a></li>
+        <li><a href="#custom-style">カスタム書式 / Custom Styles</a></li>
+      </ol></li>
+      <li><a href="#feature">詳細 / Feature</a></li>
+      <li><a href="#reference">参考 / Reference</a></li>
+      <li><a href="#author">作者 / Author</a></li>
+      <li><a href="#license">ライセンス / License</a></li>
+    </ol>
 
-public class MainActivity extends Activity {
-  @Override protected void onCreate (Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.tayout.main_activity);
+    <h2 id="overview">## 概要 / Overview</h2>
+    <p>より良い外観の<code>&lt;textarea&gt;</code>を提供します。</p>
+
+    <hr>
+
+    <h2 id="requirement">## 要求事項 / Requirement</h2>
+    <ul>
+      <li>ブラウザがカスタム要素、クラス構文、グリッドレイアウト、Shadow-DOM等の比較的新しい機能をサポートしている必要があります。</li>
+    </ul>
+
+    <hr>
+
+    <h2 id="usage">## 使い方 / Usage</h2>
+    <p><code>&lt;lined-textarea&gt;</code>を使うためには、以下のCSSとJSファイルを読み込む必要があります。<br><!--
+    -->適宜<code>&lt;head&gt;</code>や<code>&lt;body&gt;</code>内で読み込んでください。<p>
+    <ul>
+      <li><a href="HTMLLinedTextAreaElement.css" target="_new">HTMLLinedTextAreaElement.css</a></li>
+      <li><a href="HTMLLinedTextAreaElement.js" target="_new">HTMLLinedTextAreaElement.js</a></li>
+    </ul>
+
+    <h3 id="default-style">### デフォルト書式 / Default Styles</h3>
+    <table border="1" width="100%">
+      <tr>
+        <th>Code</th>
+        <td><pre><code>&lt;lined-textarea&gt;public class Main {
+  public static void main (String[] args) {
+    System.out.println(&quot;Hello, world&quot);
   }
-}</lined-textarea>
+}&lt;/lined-textarea&gt;</code></pre></td>
+      </tr>
+      <tr>
+        <th>Result</th>
+        <td><lined-textarea>public class Main {
+  public static void main (String[] args) {
+    System.out.println("Hello, world");
+  }
+}</lined-textarea></td>
+      </tr>
+    </table>
+
+    <h3 id="custom-style">### カスタム書式 / Custom Styles</h3>
+    <p><code>style</code>属性やCSSで背景色、文字色、線色を変更することが可能です。</p>
+    <table border="1" width="100%">
+      <tr>
+        <th>Code</th>
+        <td><pre><code>&lt;lined-textarea style=&quot;
+    background-color: ghostwhite;
+    border-color: darkslategray;
+    color: darkslategray&quot;&gt;public class Main {
+  public static void main (String[] args) {
+    System.out.println(&quot;Hello, world&quot);
+  }
+}&lt;/lined-textarea&gt;</code></pre></td>
+      </tr>
+      <tr>
+        <th>Result</th>
+        <td><lined-textarea style="
+    background-color: ghostwhite;
+    border-color: darkslategray;
+    color: darkslategray">public class Main {
+  public static void main (String[] args) {
+    System.out.println("Hello, world");
+  }
+}</lined-textarea></td>
+      </tr>
+    </table>
+
+    <hr>
+
+    <h2 id="feature">## 詳細 / Feature</h2>
+    <p>Nothing else.</p>
+
+    <hr>
+
+    <h2 id="reference">## 参考 / Reference</h2>
+    <p><a href="https://developer.mozilla.org/ja/docs/Web" target="_new">開発者向けのウェブ技術 | MDN</a></p>
+
+    <hr>
+
+    <h2 id=""author>## 作者 / Author</h2>
+    <p><a href="https://twitter.com/refrain_net">Refrain (Twitter)</a></p>
+
+    <hr>
+
+    <h2 id="license">## ライセンス / License</h2>
+    <p>The source code is licensed MIT. The website content is licensed CC BY 4.0,see LICENSE.</p>
+    <ul>
+      <li><a href="https://creativecommons.org/licenses/by/4.0/legalcode.txt" target="_new">CC License</a></li>
+      <li><a href="https://opensource.org/licenses/mit-license.php" target="_new">MIT License</a></li>
+    </ul>
   </body>
 </html>
