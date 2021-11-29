@@ -6,8 +6,8 @@
   border-radius: 1rem;
   color: ghostwhite;
   display: grid;
-  grid-template-areas: 'linenumber code'
-                       '.......... code';
+  grid-template-areas: 'linenumber editor'
+                       '.......... editor';
   grid-template-columns: auto 1fr;
   grid-template-rows: auto .5rem;
   line-height: 1;
@@ -37,7 +37,8 @@
   border: 0;
   color: inherit;
   font: inherit;
-  grid-area: code;
+  font-family: monospace;
+  grid-area: editor;
   height: auto;
   margin: 0;
   margin-left: .5rem;
