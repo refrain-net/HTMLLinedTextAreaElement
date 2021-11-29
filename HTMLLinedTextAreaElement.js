@@ -1,24 +1,20 @@
 'use strict';
 
-customElements.define('lined-textarea', class HTMLLinedTextAreaElement extends HTMLElement {
-  static #css_string;
-  static {
-    (async () => {
-      const response = await fetch('/HTMLLinedTextAreaElement/HTMLLinedTextAreaElement.css');
-      this.#css_string = await response.text();
-    })();
-  }
+class HTMLLinedTextAreaElement extends HTMLElement {
+  static css_string;
   constructor () {
     super();
-    const root = this.attachShadow({mode: 'open'});
-    const style = document.createElement('style');
-    style.textContent = HTMLLinedTextAreaElement.#css_string;
-    root.appendChild(style);
+    const shadow = this.attachShadow({mode: 'open'});
+
+    const link = document.createElement('link');
+    link.href = 'HTMLLinedTextAreaElement.css';
+    link.rel = 'stylesheet';
+    shadow.appendChild(link);
 
     const div = document.createElement('div');
     div.className = 'linenumbers';
     div.innerHTML = '<span class="linenumber"></span>';
-    root.appendChild(div);
+    shadow.appendChild(div);
 
     const textarea = document.createElement('textarea');
     textarea.className = 'editor';
@@ -26,7 +22,7 @@ customElements.define('lined-textarea', class HTMLLinedTextAreaElement extends H
     textarea.oninput = onchange;
     textarea.onpaste = onchange;
     textarea.wrap = 'off';
-    root.appendChild(textarea);
+    shadow.appendChild(textarea);
 
     const slot = document.createElement('slot');
     slot.addEventListener('slotchange', event => {
@@ -35,6 +31,7 @@ customElements.define('lined-textarea', class HTMLLinedTextAreaElement extends H
       node.nodeValue = '';
       textarea.oninput();
     });
-    root.appendChild(slot);
+    shadow.appendChild(slot);
   }
-});
+}
+customElements.define('lined-textarea', HTMLLinedTextAreaElement);
