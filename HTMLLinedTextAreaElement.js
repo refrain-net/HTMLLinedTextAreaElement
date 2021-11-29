@@ -1,6 +1,6 @@
 'use strict';
 
-class HTMLLinedTextAreaElement extends HTMLElement {
+customElements.define('lined-textarea', class HTMLLinedTextAreaElement extends HTMLElement {
   static css_string;
   constructor () {
     super();
@@ -33,5 +33,4 @@ class HTMLLinedTextAreaElement extends HTMLElement {
     });
     shadow.appendChild(slot);
   }
-}
-customElements.define('lined-textarea', HTMLLinedTextAreaElement);
+});
