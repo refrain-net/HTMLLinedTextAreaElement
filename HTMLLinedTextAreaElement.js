@@ -1,7 +1,13 @@
 'use strict';
 
 customElements.define('lined-textarea', class HTMLLinedTextAreaElement extends HTMLElement {
-  static #css_string = (await fetch('/HTMLLinedTextAreaElement/HTMLLinedTextAreaElement.css')).text();
+  static #css_string;
+  static {
+    (async () => {
+      const response = await fetch('/HTMLLinedTextAreaElement/HTMLLinedTextAreaElement.css');
+      this.#css_string = await response.text();
+    })();
+  }
   constructor () {
     super();
     const root = this.attachShadow({mode: 'open'});
