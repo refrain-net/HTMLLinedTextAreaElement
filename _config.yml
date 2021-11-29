@@ -1,5 +1,0 @@
-plugins:
-  - jekyll-sitemap
-sass:
-  sass_dir: '/HTMLLinedTextAreaElement'
-  style: expanded
