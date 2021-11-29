@@ -1,36 +1,48 @@
 'use strict';
 
-customElements.define('lined-textarea', class HTMLLinedTextAreaElement extends HTMLElement {
-  static css_string;
+customElements.define('lined-textarea', class extends HTMLElement {
+  #linenumbers;
+  #editor;
+
   constructor () {
     super();
-    const shadow = this.attachShadow({mode: 'open'});
+
+    const root = this.attachShadow({mode: 'open'});
 
     const link = document.createElement('link');
     link.href = 'HTMLLinedTextAreaElement.css';
     link.rel = 'stylesheet';
-    shadow.appendChild(link);
+    root.appendChild(link);
 
-    const div = document.createElement('div');
-    div.className = 'linenumbers';
-    div.innerHTML = '<span class="linenumber"></span>';
-    shadow.appendChild(div);
+    const linenumbers = document.createElement('div');
+    linenumbers.className = 'linenumbers';
+    linenumbers.innerHTML = this.#updateLineNumbers();
+    root.appendChild(linenumbers);
 
-    const textarea = document.createElement('textarea');
-    textarea.className = 'editor';
-    const onchange = event => div.innerHTML = '<span class="linenumber"></span>'.repeat(textarea.value.split('\n').length);
-    textarea.oninput = onchange;
-    textarea.onpaste = onchange;
-    textarea.wrap = 'off';
-    shadow.appendChild(textarea);
+    const editor = document.createElement('textarea');
+    editor.className = 'editor';
+    const onchange = event => this.#updateLineNumbers();
+    editor.oninput = onchange;
+    editor.onpaste = onchange;
+    editor.wrap = 'off';
+    root.appendChild(editor);
 
     const slot = document.createElement('slot');
     slot.addEventListener('slotchange', event => {
       const [node] = slot.assignedNodes();
-      textarea.value = node.nodeValue;
+      editor.value = node.nodeValue;
       node.nodeValue = '';
-      textarea.oninput();
+      editor.oninput();
     });
-    shadow.appendChild(slot);
+    root.appendChild(slot);
+
+    this.#linenumbers = linenumbers;
+    this.#editor = editor;
+  }
+
+  #updateLineNumbers () {
+    const lineCount = this.#editor.value.split('\n').length;
+    const html_string = '<span class="linenumber"></span>';
+    this.#linenumbers.innerHTML = html_string.repeat(lineCount);
   }
 });
