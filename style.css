@@ -18,47 +18,20 @@ a {
 h1 {
   font-weight: normal;
   font-size: 2rem;
-  margin: 1rem 0;
-  padding: 0;
-  text-align: center;
 }
 
 h2 {
   font-weight: normal;
   font-size: 1.8rem;
-  margin: 1rem 0;
-  padding: 0;
 }
 
 h3 {
   font-weight: normal;
   font-size: 1.6rem;
-  margin: 1rem 0;
-  padding: 0;
-}
-
-hr {
-  margin: 1rem 0;
-  padding: 0;
 }
 
 ol {
-  margin: 1rem 0;
-  padding: 0;
   padding-left: 2rem;
-}
-ol ol, ol ul {
-  margin: 0;
-}
-
-p {
-  margin: 1rem 0;
-  padding: 0;
-}
-
-pre {
-  margin: 0;
-  padding: 0;
 }
 
 pre code {
@@ -71,17 +44,6 @@ table {
   border-spacing: 0;
 }
 
-td, th {
-  margin: 0;
-  padding: 0;
-}
-
 ul {
-  margin: 1rem 0;
-  padding: 0;
   padding-left: 2rem;
-}
-
-ul ol, ul ul {
-  margin: 0;
 }
