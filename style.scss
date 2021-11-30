@@ -16,44 +16,26 @@ a {
   text-decoration: none;
 }
 
+$headline-border-colors: rgb(255, 63, 0), rgb(0, 255, 63), rgb(63, 255, 127);
+$headline-before-border-colors: rgb(255, 127, 63), rgb(63, 255, 127), rgb(127, 63, 255);
+
 @for $i from 1 through 3 {
   h#{$i} {
-    border-bottom: solid .2rem;
+    border-bottom: solid .2rem nth($headline-border-colors, $i);
     font-size: 2rem - ($i - 1) * .2rem;
     font-weight: normal;
     padding: .5rem;
     position: relative;
     &::before {
-      border-bottom: solid .2rem;
+      border-bottom: solid .2rem nth($headline-border-border-colors, $i);
       bottom: -.2rem;
       content: '';
       height: 100%;
       left: 0;
       position: absolute;
       top: 0;
-      width: 5rem;
+      width: 10rem;
     }
-  }
-}
-
-h1 {
-  border-bottom-color: rgb(255, 63, 0);
-  &::before {
-    border-bottom-color: rgb(255, 127, 63);
-  }
-}
-
-h2 {
-  border-bottom-color: rgb(0, 255, 63);
-  &::before {
-    border-bottom-color: rgb(63, 255, 127);
-  }
-}
-
-h3 {
-  border-bottom-color: rgb(63, 0, 255);
-  &::before {
-    border-bottom-color: rgb(127, 63, 255);
   }
 }
 
