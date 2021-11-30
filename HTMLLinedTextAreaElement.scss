@@ -56,12 +56,12 @@ $font-color: ghostwhite;
     &::-webkit-scrollbar-thumb {
       background: $background-color-accent;
       border-radius: .25rem;
-      box-shadow: inset 0 0 .25rem $border-color;
+      box-shadow: inset 0 0 .25rem $border-color-accent;
     }
     &::-webkit-scrollbar-track {
       background: $background-color;
       border-radius: .25rem;
-      box-shadow: inset 0 0 .25rem $border-color-accent;
+      box-shadow: inset 0 0 .25rem $border-color;
     }
   }
 }
