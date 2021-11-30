@@ -1,9 +1,16 @@
 ---
 ---
 
+$background-color: ghostwhite;
+$background-color-accent: ghostwhite;
+$font-color: darkslategray;
+$font-color-accent: ghostwhite;
+$border-color: darkslategray;
+$border-color-accent: ghostwhite;
+
 html {
-  background: ghostwhite;
-  color: darkslategray;
+  background: $background-color;
+  color: $font-color;
   font: 20px serif;
 }
 
@@ -20,7 +27,7 @@ a {
 
 @for $i from 1 through 3 {
   h#{$i} {
-    border: solid 0 darkslategray;
+    border: solid 0 $border-color;
     font: 2rem - ($i - 1) * .2rem inherit normal;
     padding: .5rem;
   }
@@ -58,7 +65,7 @@ table {
 }
 
 td, th {
-  border-color: darkslategray;
+  border-color: $border-color;
 }
 
 ul {
