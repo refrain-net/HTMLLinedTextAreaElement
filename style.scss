@@ -21,7 +21,7 @@ a {
 @for $i from 1 through 3 {
   h#{$i} {
     border: solid 0 darkslategray;
-    font: (2rem - ($i - 1) * .2rem) inherit normal;
+    font: 2rem - ($i - 1) * .2rem inherit normal;
     padding: .5rem;
   }
 }
@@ -55,6 +55,10 @@ pre code {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+td, th {
+  border-color: darkslategray;
 }
 
 ul {
