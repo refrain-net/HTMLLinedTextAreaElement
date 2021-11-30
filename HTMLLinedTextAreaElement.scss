@@ -1,10 +1,10 @@
 ---
 ---
 
-$background-color: ghostwhite;
-$background-color-accent: darkslategray;
+$background-color: darkslategray;
+$background-color-accent: ghostwhite;
 $border-color: ghostwhite;
-$border-color-accent: ghostwhite;
+$border-color-accent: darkslategray;
 $font-color: ghostwhite;
 
 :host {
@@ -54,14 +54,14 @@ $font-color: ghostwhite;
       width: .5rem;
     }
     &::-webkit-scrollbar-thumb {
-      background: $background-color;
-      border-radius: .25rem;
-      box-shadow: inset 0 0 .25rem $border-color-accent;
-    }
-    &::-webkit-scrollbar-track {
       background: $background-color-accent;
       border-radius: .25rem;
       box-shadow: inset 0 0 .25rem $border-color;
+    }
+    &::-webkit-scrollbar-track {
+      background: $background-color;
+      border-radius: .25rem;
+      box-shadow: inset 0 0 .25rem $border-color-accent;
     }
   }
 }
