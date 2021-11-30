@@ -22,7 +22,7 @@ customElements.define('lined-textarea', class extends HTMLElement {
     root.appendChild(editor);
     root.appendChild(slot);
 
-    link.href = 'HTMLLinedTextAreaElement.css';
+    link.href = 'https://refrain-net.github.io/HTMLLinedTextAreaElement/HTMLLinedTextAreaElement.css';
     link.rel = 'stylesheet';
 
     linenumbers.className = 'linenumbers';
