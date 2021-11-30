@@ -16,7 +16,7 @@ a {
   text-decoration: none;
 }
 
-$headline-border-colors: rgb(255, 63, 0), rgb(0, 255, 63), rgb(63, 255, 0);
+$headline-border-colors: rgb(255, 63, 0), rgb(0, 255, 63), rgb(63, 0, 255);
 $headline-before-border-colors: rgb(255, 127, 63), rgb(63, 255, 127), rgb(127, 63, 255);
 
 @for $i from 1 through 3 {
