@@ -1,11 +1,17 @@
 ---
 ---
 
+$background-color: ghostwhite;
+$background-color-accent: darkslategray;
+$border-color: ghostwhite;
+$border-color-accent: ghostwhite;
+$font-color: ghostwhite;
+
 :host {
-  background: darkslategray;
-  border-color: ghostwhite;
+  background: $background-color;
+  border-color: $border-color;
   border-radius: 1rem;
-  color: ghostwhite;
+  color: $font-color;
   display: grid;
   grid-template-areas: 'linenumber editor'
                        '.......... editor';
@@ -48,14 +54,14 @@
       width: .5rem;
     }
     &::-webkit-scrollbar-thumb {
-      background: ghostwhite;
+      background: $background-color;
       border-radius: .25rem;
-      box-shadow: inset 0 0 .25rem darkslategray;
+      box-shadow: inset 0 0 .25rem $border-color-accent;
     }
     &::-webkit-scrollbar-track {
-      background: darkslategray;
+      background: $background-color-accent;
       border-radius: .25rem;
-      box-shadow: inset 0 0 .25rem ghostwhite;
+      box-shadow: inset 0 0 .25rem $border-color;
     }
   }
 }
