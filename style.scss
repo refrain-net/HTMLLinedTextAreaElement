@@ -2,11 +2,8 @@
 ---
 
 $background-color: ghostwhite;
-$background-color-accent: ghostwhite;
 $font-color: darkslategray;
-$font-color-accent: ghostwhite;
 $border-color: darkslategray;
-$border-color-accent: ghostwhite;
 
 html {
   background: $background-color;
@@ -48,6 +45,7 @@ h2 {
 h3 {
   border-bottom-width: .1rem;
   border-top-width: .1rem;
+  text-align: center;
 }
 
 ol {
