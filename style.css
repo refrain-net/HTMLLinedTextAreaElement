@@ -16,11 +16,13 @@ a {
 }
 
 h1 {
+  border-bottom: dashed .1rem dodgerblue;
   font-weight: normal;
   font-size: 2rem;
 }
 
 h2 {
+  border-bottom: double .2rem orange;
   font-weight: normal;
   font-size: 1.8rem;
 }
