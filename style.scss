@@ -27,7 +27,7 @@ $headline-before-border-colors: rgb(255, 127, 63), rgb(63, 255, 127), rgb(127, 6
     padding: .5rem;
     position: relative;
     &::before {
-      border-bottom: solid .2rem nth($headline-border-border-colors, $i);
+      border-bottom: solid .2rem nth($headline-before-border-colors, $i);
       bottom: -.2rem;
       content: '';
       height: 100%;
