@@ -20,10 +20,8 @@ a {
 
 @for $i from 1 through 3 {
   h#{$i} {
-    border-color: darkslategray;
-    border-style: solid;
-    font-size: 2rem - ($i - 1) * .2rem;
-    font-weight: normal;
+    border: solid 0 darkslategray;
+    font: (2rem - ($i - 1) * .2rem) inherit normal;
     padding: .5rem;
   }
 }
