@@ -16,13 +16,23 @@ a {
 }
 
 h1 {
-  border-bottom: dashed .1rem dodgerblue;
+  border-bottom: solid .2rem tomato;
   font-weight: normal;
   font-size: 2rem;
+  padding: .5rem;
+  position: relative;
+}
+h1::before {
+  background: salmon;
+  bottom: -.2rem;
+  content: '';
+  height: .2rem;
+  left: 0;
+  position: absolute;
+  width: 5rem;
 }
 
 h2 {
-  border-bottom: double .2rem orange;
   font-weight: normal;
   font-size: 1.8rem;
 }
