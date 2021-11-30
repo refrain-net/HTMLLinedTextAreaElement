@@ -1,4 +1,5 @@
-@charset 'utf-8';
+---
+---
 
 html {
   font: 20px serif;
@@ -16,20 +17,21 @@ a {
 }
 
 h1 {
-  border-bottom: solid .2rem tomato;
+  border-bottom: solid .2rem rgb(255, 63, 0);
   font-weight: normal;
   font-size: 2rem;
   padding: .5rem;
   position: relative;
-}
-h1::before {
-  background: salmon;
-  bottom: -.2rem;
-  content: '';
-  height: .2rem;
-  left: 0;
-  position: absolute;
-  width: 5rem;
+  &::before {
+    border-bottom: solid .2rem rgb(255, 127, 63);
+    bottom: -.2rem;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 5rem;
+  }
 }
 
 h2 {
