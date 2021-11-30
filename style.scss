@@ -19,7 +19,7 @@ a {
 @for $i from 1 through 3 {
   h#{$i} {
     border-bottom: solid .2rem;
-    font-size: 2rem - (1 - $i) * .2rem;
+    font-size: 2rem - ($i - 1) * .2rem;
     font-weight: normal;
     padding: .5rem;
     position: relative;
