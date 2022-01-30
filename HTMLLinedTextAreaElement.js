@@ -3,6 +3,10 @@
 customElements.define('lined-textarea', class extends HTMLElement {
   #linenumbers;
   #editor;
+  
+  set value (newValue) {
+    this.#editor.value = newValue;
+  }
 
   constructor () {
     super();
